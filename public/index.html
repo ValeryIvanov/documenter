@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>What would you like to do?</h1>
+        </div>
+        <div class="option1">
+            <label>
+                <input type="radio" name="option" value="find" checked/>
+                <div class="box">
+                    <span>Find</span>
+                </div>
+            </label>
+        </div>
+        <div class="option2">
+            <label>
+                <input type="radio" name="option" value="add"/>
+                <div class="box">
+                    <span>Add</span>
+                </div>
+            </label>
+        </div>
+        <div class="input">
+            <input type="text" name="value" id="value" />
+        </div>
+        <table class="table">
+            <tr>
+                <td>Text: </td>
+                <td id="text"></td>
+            </tr>
+            <tr>
+                <td>Creator: </td>
+                <td id="creator"></td>
+            </tr>
+            <tr>
+                <td>Timestamp: </td>
+                <td id="timestamp"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/jsonPrettifier.js"></script>
+<script src="js/main.js"></script>
+
+</html>

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Dax:400,900');
+$font: 'Dax',
+-serif;
+$white: #fff;
+$green: #007e90;
+h1 {
+    font-family: $font;
+    color: $green;
+}
+
+input[type="radio"] {
+    display: none;
+    &:checked {
+        +.box {
+            background-color: $green;
+            span {
+                color: white;
+                transform: translateY(70px);
+                &:before {
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+input[type="text"] {
+    border: 1px solid $green;
+    height: 50px;
+    width: 500px;
+    font-size: 14pt;
+}
+
+.box {
+    padding: 10px 100px 10px 100px;
+    background-color: $white;
+    transition: all 250ms ease;
+    will-change: transition;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    font-family: $font;
+    font-weight: 900;
+    &:active {
+        transform: translateY(10px);
+    }
+    span {
+        transform: translate(0, 60px);
+        transition: all 300ms ease;
+        font-size: 1.5em;
+        user-select: none;
+        color: $green;
+        &:before {
+            font-size: 1.2em;
+            font-family: FontAwesome;
+            display: block;
+            transform: translateY(-80px);
+            opacity: 0;
+            transition: all 300ms ease-in-out;
+            font-weight: normal;
+            color: white;
+        }
+    }
+}
