@@ -4,6 +4,7 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var livereload = require('gulp-livereload');
 var sourcemaps = require('gulp-sourcemaps');
+var bower = require('gulp-bower');
 
 gulp.task('styles', function() {
     return gulp
@@ -12,6 +13,10 @@ gulp.task('styles', function() {
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('public/css'));
+});
+
+gulp.task('bower', function() {
+  return bower({cwd: './public'});
 });
 
 gulp.task('watch', function() {
@@ -25,5 +30,5 @@ gulp.task('server', function() {
     });
 });
 
-gulp.task('serve', ['server', 'watch']);
+gulp.task('serve', ['server', 'bower', 'watch']);
 gulp.task('default', ['serve']);

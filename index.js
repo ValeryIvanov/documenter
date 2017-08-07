@@ -34,7 +34,7 @@ app.get("/data", function(req, res) {
 
     var q = {
         query: [{
-            AND: { 'creator': [searchString] }
+            AND: { 'text': [searchString] }
         }]
     };
 

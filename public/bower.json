@@ -1,0 +1,20 @@
+{
+  "name": "documenter",
+  "homepage": "https://github.com/ValeryIvanov/documenter",
+  "authors": [
+    "Valery Ivanov"
+  ],
+  "description": "",
+  "main": "",
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
